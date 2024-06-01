@@ -42,7 +42,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper/modules";
-import img from "../assets/andr.webp";
+import img from "../assets/andr.png";
 import img2 from "../assets/andrrte.png";
 import img3 from "../assets/andrs.png";
 import img4 from "../assets/andrtwo.png";
