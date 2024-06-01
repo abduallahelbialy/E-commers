@@ -18,9 +18,9 @@
 </template>
 
 <script>
-import imgone from "../assets/Save.png";
-import img2 from "../assets/loc.png";
-import img3 from "../assets/car.png";
+import imgone from "../assets/Save-removebg-preview.png";
+import img2 from "../assets/loc-removebg-preview.png";
+import img3 from "../assets/car-removebg-preview.png";
 export default {
   name: "servies",
   data() {
@@ -63,8 +63,13 @@ export default {
   .all {
     margin-top: 0px;
   }
+  .img-car{
+  max-width: 50px;
+  max-width: 50px;
+}
   .card-one{
-    width: 250px;
+    width: 200px;
+    padding: 5px;
   }
 }
 @media (max-width: 799px) {
@@ -81,5 +86,9 @@ export default {
   .all {
     margin-top: 0px;
   }
+}
+.img-car{
+  max-width: 100px;
+  max-width: 100px;
 }
 </style>

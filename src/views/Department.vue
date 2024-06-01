@@ -29,10 +29,11 @@
 </template>
 
 <script>
-import imgone from "../assets/toast-solid_.png";
-import img2 from "../assets/box-question-mark_.png";
-import img3 from "../assets/cafe_.png";
-import img4 from "../assets/restaurant_.png";
+import imgone from "../assets/brot-removebg-preview.png";
+import img2 from "../assets/markt-removebg-preview.png";
+import img3 from "../assets/cafes-removebg-preview.png";
+import img4 from "../assets/Restaurant-removebg-preview.png";
+import hotel from "../assets/hotel-removebg-preview.png"
 import arrow from "../assets/arrow.png";
 export default {
   name: "department",
@@ -41,7 +42,7 @@ export default {
 // arro: arrow, 
 depart:"الاقسام",    
       cards: [
-        { id: 2, img: imgone, des: "فنادق" },
+        { id: 2, img: hotel, des: "فنادق" },
         { id: 1, img: img4, des: "مطاعم" },
         { id: 3, img: img2, des: "سوبر ماركت" },
         { id: 4, img: imgone, des: "مخابز" },
@@ -83,7 +84,7 @@ depart:"الاقسام",
 }
 
 .card-one:hover{
-  background-color: var(--main-color);
-  color: #fff !important;
+  background-color: #e4eeff;
+  color: #000 !important;
 }
 </style>
