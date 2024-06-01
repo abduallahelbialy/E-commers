@@ -18,9 +18,9 @@
 </template>
 
 <script>
-import imgone from "../assets/Save-removebg-preview.png";
-import img2 from "../assets/loc-removebg-preview.png";
-import img3 from "../assets/car-removebg-preview.png";
+import imgone from "../assets/Save-removebg-preview.webp";
+import img2 from "../assets/loc-removebg-preview.webp";
+import img3 from "../assets/car-removebg-preview.webp";
 export default {
   name: "servies",
   data() {
