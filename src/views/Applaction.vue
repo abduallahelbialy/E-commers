@@ -42,12 +42,12 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper/modules";
-import img from "../assets/andr.webp";
-import img2 from "../assets/andrrte.webp";
-import img3 from "../assets/andrs.webp";
-import img4 from "../assets/andrtwo.webp";
-import phone from "../assets/ooa.webp"
-import phone2 from "../assets/oo .webp"
+import img from "../assets/andr.png";
+import img2 from "../assets/andrrte.png";
+import img3 from "../assets/andrs.png";
+import img4 from "../assets/andrtwo.png";
+import phone from "../assets/ooa.png"
+import phone2 from "../assets/oo .png"
 export default {
   name: "applcation",
   data() {
