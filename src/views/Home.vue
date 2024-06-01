@@ -40,9 +40,9 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
 import { Navigation,Autoplay } from "swiper/modules";
-import swi from "../assets/856cb9149c99b0ff4ca9368e46b8fb89.webp";
-import swi2 from "../assets/switwo.webp";
-import swi3 from "../assets/1693382170_8564.webp";
+import swi from "../assets/856cb9149c99b0ff4ca9368e46b8fb89.png";
+import swi2 from "../assets/switwo.png";
+import swi3 from "../assets/1693382170_8564.png";
 import Card from "./Card.vue";
 import Department from "./Department.vue";
 import More from "./More.vue";
