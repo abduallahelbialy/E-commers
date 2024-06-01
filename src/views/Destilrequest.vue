@@ -853,7 +853,7 @@
 
 <script>
 import { ref } from "vue";
-import imgcard from "../assets/vojtech-bruzek-Yrxr3bsPdS0-unsplash.png";
+import imgcard from "../assets/vojtech-bruzek-Yrxr3bsPdS0-unsplash.webp";
 import imgp from "../assets/Untitled-1.jpg";
 import Rating from "primevue/rating";
 import { mapActions, mapGetters } from "vuex";
