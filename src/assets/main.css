@@ -1,0 +1,113 @@
+:root{
+  --main-color:#0d4194;
+  --main-text:#cacaca;
+  --main-btn:#1F4B43;
+  --main-with:#FFF;
+ 
+}
+/* scroll */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ddd;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 5px;
+}
+/* Order */
+@layer reset, primevue;
+
+/* Reset CSS */
+@layer reset {
+    button,
+    input {
+        /* CSS to Reset */
+    }
+}
+body{
+  direction: rtl;
+  background-color: #FFF;
+}
+.cvar2 button {
+  border: none;
+  padding: 7px;
+  width: 130px;
+  border-radius: 4px 4px;
+  color: #fff;
+  background-color: var(--main-color);
+  outline: none;
+}
+
+.mainsize{
+  font-size: 18px;
+}
+.welcome{
+  font-size: 25px;
+}
+.mainsize2{
+  font-size: 13px;
+}
+a{
+  text-decoration: none !important;
+}
+.swiper-button-prev, .swiper-button-next {
+    background-color:var(--main-color) !important;
+    color: #fff !important;
+    width: 54px !important;
+    height: 54px  !important;
+    border-radius: 50%;
+}
+@media (max-width:477px) {
+  .swiper-button-prev, .swiper-button-next {
+    background-color:var(--main-color) !important;
+    color: #fff !important;
+    width: 30px !important;
+    height: 30px  !important;
+    border-radius: 50%;
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: 'next' !important;
+    font-size: 15px !important;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: 'prev' !important;
+    font-size: 15px !important;
+}
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: 'next' !important;
+    font-size: 27px;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: 'prev' !important;
+    font-size: 27px;
+}
+.p-rating .p-rating-item.p-rating-item-active .p-rating-icon {
+    color: yellow;
+}
+.card {
+   --bs-card-bg:none !important;
+    --bs-card-border-color: none !important;
+   
+}
+.swiper-pagination-bullet {
+    width: 45px !important;
+    height: 7px !important;
+    display: inline-block;
+    border-radius:2px !important;
+    background: var(--swiper-pagination-bullet-inactive-color, #000);
+    opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
+}
+
+@media (max-width:477px) {
+  .swiper-pagination-bullet{
+    display: none !important;
+  }
+}
