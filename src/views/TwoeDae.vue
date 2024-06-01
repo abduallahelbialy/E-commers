@@ -63,10 +63,13 @@ export default {
   margin: auto;
 }
 @media (max-width:477px) {
-  .bactwo[data-v-baeb1e67] {
+  .bactwo {
     width: 100%;
-    height: 182px;
+    height:auto;
    
+}
+.img-not{
+  display: none;
 }
 }
 .img-not {
