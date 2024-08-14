@@ -78,6 +78,9 @@
 <script>
 import { ref } from "vue";
 import imgcard from "../assets/vojtech-bruzek-Yrxr3bsPdS0-unsplash.webp";
+import imgcard2 from "../assets/71B3JCgklQL._AC_UL480_FMwebp_QL65_.webp";
+import imgcard3 from "../assets/716mHLcER6L._AC_UL480_FMwebp_QL65_.webp";
+import imgcard4 from "../assets/51NdxsYwq-L._AC_UL480_FMwebp_QL65_.webp";
 import Rating from "primevue/rating";
 import { mapActions, mapGetters } from "vuex";
 export default {
@@ -86,7 +89,7 @@ export default {
     return {
       more: "المزيد",
       pay: "العروض",
-       cards: [
+      cards: [
         {
           id: 1,
           img: imgcard,
@@ -99,8 +102,8 @@ export default {
         },
         {
           id: 2,
-          img: imgcard,
-          title: "سرير تركى",
+          img: imgcard2,
+          title: "أباجورة مودرن أمازون",
           price: "8000ر.س",
           hotle: "فنادق",
           offer: "off 50%",
@@ -109,8 +112,8 @@ export default {
         },
         {
           id: 3,
-          img: imgcard,
-          title: "سرير تركى",
+          img: imgcard3,
+          title: " وحدة تلفزيون ترفيهية",
           price: "8000ر.س",
           hotle: "فنادق",
           offer: "off 50%",
@@ -119,8 +122,8 @@ export default {
         },
         {
           id: 4,
-          img: imgcard,
-          title: "سرير تركى",
+          img: imgcard4,
+          title: "ساعة سمارت",
           price: "8000ر.س",
           hotle: "فنادق",
           offer: "off 50%",

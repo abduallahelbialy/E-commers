@@ -85,6 +85,17 @@
 <script>
 import { ref } from "vue";
 import imgcard from "../assets/vojtech-bruzek-Yrxr3bsPdS0-unsplash.webp";
+import imgcard2 from "../assets/71B3JCgklQL._AC_UL480_FMwebp_QL65_.webp";
+import imgcard3 from "../assets/716mHLcER6L._AC_UL480_FMwebp_QL65_.webp";
+import imgcard4 from "../assets/51NdxsYwq-L._AC_UL480_FMwebp_QL65_.webp";
+import imgcard5 from "../assets/71KYElz2YOL._AC._SR360,460.jpg";
+import imgcard6 from "../assets/31PFiCIw3WL._SR480,440_.jpg";
+import imgcard7 from "../assets/81i7ltXHBxL._AC_UY327_FMwebp_QL65_.webp";
+import imgcard8 from "../assets/71ekvEtwCiL._AC_UY327_FMwebp_QL65_.webp";
+import imgcard9 from "../assets/71zsEBds3ML._AC_UY327_FMwebp_QL65_.webp";
+import imgcard10 from "../assets/51cqVS0xn0L._AC_UY327_FMwebp_QL65_.webp";
+import imgcard11 from "../assets/61ftqtUqlWL._AC_UY327_FMwebp_QL65_.webp";
+import imgcard12 from "../assets/61PzOJb40-L._AC_UY327_FMwebp_QL65_.webp";
 import Rating from "primevue/rating";
 import { mapActions, mapGetters } from "vuex";
 export default {
@@ -92,7 +103,7 @@ export default {
   data() {
     return {
       more: "العروض",
-   cards: [
+  cards: [
         {
           id: 1,
           img: imgcard,
@@ -103,10 +114,10 @@ export default {
           det: "تفاصيل المنتج",
           value: ref("3"),
         },
-        {
+          {
           id: 2,
-          img: imgcard,
-          title: "سرير تركى",
+          img: imgcard2,
+          title: "أباجورة مودرن أمازون",
           price: "8000ر.س",
           hotle: "فنادق",
           offer: "off 50%",
@@ -115,8 +126,8 @@ export default {
         },
         {
           id: 3,
-          img: imgcard,
-          title: "سرير تركى",
+          img: imgcard3,
+          title: " وحدة تلفزيون ترفيهية",
           price: "8000ر.س",
           hotle: "فنادق",
           offer: "off 50%",
@@ -125,8 +136,8 @@ export default {
         },
         {
           id: 4,
-          img: imgcard,
-          title: "سرير تركى",
+          img: imgcard4,
+          title: "ساعة سمارت",
           price: "8000ر.س",
           hotle: "فنادق",
           offer: "off 50%",
@@ -135,8 +146,8 @@ export default {
         },
         {
           id: 5,
-          img: imgcard,
-          title: "سرير تركى",
+          img: imgcard5,
+          title: "لينوفو لوكيو 15IRX9",
           price: "8000ر.س",
           hotle: "فنادق",
           offer: "off 50%",
@@ -145,8 +156,8 @@ export default {
         },
         {
           id: 6,
-          img: imgcard,
-          title: "سرير تركى",
+          img: imgcard6,
+          title: "سماعات للرأس",
           price: "8000ر.س",
           hotle: "فنادق",
           offer: "off 50%",
@@ -155,8 +166,8 @@ export default {
         },
         {
           id: 7,
-          img: imgcard,
-          title: "سرير تركى",
+          img: imgcard7,
+          title: "قلاية هوائية رقمية",
           price: "8000ر.س",
           hotle: "فنادق",
           offer: "off 50%",
@@ -165,8 +176,8 @@ export default {
         },
         {
           id: 8,
-          img: imgcard,
-          title: "سرير تركى",
+          img: imgcard8,
+          title: "حلة طهى",
           price: "8000ر.س",
           hotle: "فنادق",
           offer: "off 50%",
@@ -175,8 +186,8 @@ export default {
         },
         {
           id: 9,
-          img: imgcard,
-          title: "سرير تركى",
+          img: imgcard9,
+          title: "مروحة بوكس",
           price: "8000ر.س",
           hotle: "فنادق",
           offer: "off 50%",
@@ -185,8 +196,8 @@ export default {
         },
         {
           id: 10,
-          img: imgcard,
-          title: "سرير تركى",
+          img: imgcard10,
+          title: "غلاية كهربائية",
           price: "8000ر.س",
           hotle: "فنادق",
           offer: "off 50%",
@@ -195,8 +206,8 @@ export default {
         },
         {
           id:11,
-          img: imgcard,
-          title: "سرير تركى",
+          img: imgcard11,
+          title: "مقلاة كهربائية رقمية",
           price: "8000ر.س",
           hotle: "فنادق",
           offer: "off 50%",
@@ -205,8 +216,8 @@ export default {
         },
         {
           id: 12,
-          img: imgcard,
-          title: "سرير تركى",
+          img: imgcard12,
+          title: "غساله زانوسى ",
           price: "8000ر.س",
           hotle: "فنادق",
           offer: "off 50%",

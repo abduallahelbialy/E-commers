@@ -45,7 +45,11 @@
             <div
               class="grop-radi d-flex justify-content-center gap-3 flex-wrap"
             >
-              <div class="form-chemck d-flex gap-2" @click="activeTap='1'" :class="[activeTap ==='1'?'active':'']">
+              <div
+                class="form-chemck d-flex gap-2"
+                @click="activeTap = '1'"
+                :class="[activeTap === '1' ? 'active' : '']"
+              >
                 <input
                   class="form-check-input fw-medium"
                   type="radio"
@@ -54,10 +58,14 @@
                   checked
                 />
                 <label class="form-check-label" for="flexRadioDefault2">
-                  استلام بواسطة جهز
+                  استلام بواسطة طلبك
                 </label>
               </div>
-              <div class="form-chemck d-flex gap-2" @click="activeTap='2'" :class="[activeTap ==='2'?'active':'']">
+              <div
+                class="form-chemck d-flex gap-2"
+                @click="activeTap = '2'"
+                :class="[activeTap === '2' ? 'active' : '']"
+              >
                 <input
                   class="form-check-input"
                   type="radio"
@@ -69,319 +77,347 @@
                 </label>
               </div>
             </div>
-            <div class="all-tap" v-if="activeTap==='1'" >
-
-            <div
-              class="grop-forms d-flex justify-content-center flex-column flex-wrap"
-            >
-              <div class="d-flex justify-content-center gap-4 mt-4 flex-wrap">
-                <div class="one mb-3 d-flex flex-column">
-                  <label for="">اسم المستلم</label>
-                  <input type="text" placeholder="الرجاء ادخال اسم المستخدم" />
+            <div class="all-tap" v-if="activeTap === '1'">
+              <div
+                class="grop-forms d-flex justify-content-center flex-column flex-wrap"
+              >
+                <div class="d-flex justify-content-center gap-4 mt-4 flex-wrap">
+                  <div class="one mb-3 d-flex flex-column">
+                    <label for="">اسم المستلم</label>
+                    <input
+                      type="text"
+                      placeholder="الرجاء ادخال اسم المستخدم"
+                    />
+                  </div>
+                  <div class="one mb-3 d-flex flex-column">
+                    <label for="">رقم الجوال</label>
+                    <input
+                      type="number"
+                      placeholder="الرجاء ادخال رقم الجوال"
+                    />
+                  </div>
                 </div>
-                <div class="one mb-3 d-flex flex-column">
-                  <label for="">رقم الجوال</label>
-                  <input type="number" placeholder="الرجاء ادخال رقم الجوال" />
+                <div class="d-flex justify-content-center gap-4 mt-1 flex-wrap">
+                  <div class="one mb-3 d-flex flex-column">
+                    <label for="">المدينة</label>
+                    <input type="text" placeholder="الرجاء ادخال اسم المدينة" />
+                  </div>
+                  <div class="one mb-3 d-flex flex-column">
+                    <label for="">تاريج الاستلام</label>
+                    <input
+                      type="number"
+                      placeholder="الرجاء ادخال رقم الاستلام"
+                    />
+                  </div>
                 </div>
               </div>
-              <div class="d-flex justify-content-center gap-4 mt-1 flex-wrap">
-                <div class="one mb-3 d-flex flex-column">
-                  <label for="">المدينة</label>
-                  <input type="text" placeholder="الرجاء ادخال اسم المدينة" />
+              <div
+                class="grop-radi d-flex justify-content-center gap-3 mb-2 flex-wrap"
+              >
+                <div class="addres d-flex flex-column">
+                  <label for="">العنوان</label>
+                  <input type="text" placeholder="الرجاء ادخال العنوان" />
                 </div>
-                <div class="one mb-3 d-flex flex-column">
-                  <label for="">تاريج الاستلام</label>
+              </div>
+              <div
+                class="grop-radi d-flex justify-content-center gap-3 flex-wrap"
+              >
+                <div class="d-flex flex-column">
+                  <label for="" class="me-2">ملاحظاتك</label>
+                  <div class="card">
+                    <Editor v-model="value" editorStyle="height: 150px" />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="grop-radis d-flex justify-content-center gap-3 flex-wrap mt-3"
+              >
+                <div class="form-chemcsk d-flex gap-2">
                   <input
-                    type="number"
-                    placeholder="الرجاء ادخال رقم الاستلام"
+                    class="form-check-input fw-medium"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault3"
+                    checked
                   />
+                  <label class="form-checsk-label" for="flexRadioDefault1">
+                    <i class="pi pi-paypal"></i>دفع الكترونى
+                  </label>
+                </div>
+                <div class="form-chemck d-flex gap-2">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault1"
+                  />
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    <i class="pi pi-car"></i> دفع بواسطة الشركه
+                  </label>
+                </div>
+              </div>
+              .
+              <div
+                class="grop-radis d-flex justify-content-center gap-3 flex-wrap mt-3"
+              >
+                <div class="desc" style="width: 620px; height: auto">
+                  <div class="destext border-bottom">
+                    <p class="fw-semibold p-1">ملخص الطلب:</p>
+                  </div>
+                  <div
+                    class="onetext text-black-50 mb-1 d-flex justify-content-between align-items-center flex-wrap"
+                  >
+                    <p>قيمة الطلب</p>
+                    <p>60.00 رس</p>
+                  </div>
+                  <div
+                    class="onetext text-black-50 mb-1 d-flex justify-content-between align-items-center flex-wrap"
+                  >
+                    <p>رسوم التوصيل</p>
+                    <p>10.00 رس</p>
+                  </div>
+                  <div
+                    class="onetext text-black-50 mb-1 d-flex justify-content-between align-items-center flex-wrap"
+                  >
+                    <p>القيمة المضافة</p>
+                    <p>00.00 رس</p>
+                  </div>
+                  <div
+                    class="onetextw p-1 d-flex justify-content-between align-items-center flex-wrap"
+                  >
+                    <p class="text-black-50">الاجمالى</p>
+                    <p>60.00 رس</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="grop-radis d-flex justify-content-center gap-3 flex-wrap mt-3"
+              >
+                <div class="card flex justify-content-center">
+                  <div class="btn-send">
+                    <button label="ارسال الطلب" @click="visible = true">
+                      ارسال الطلب
+                    </button>
+                  </div>
+                  <Dialog
+                    v-model:visible="visible"
+                    modal
+                    header=""
+                    :style="{ width: '30vw' }"
+                    :breakpoints="{ '1199px': '75vw', '575px': '90vw' }"
+                  >
+                    <div class="m-0 text-center scss">
+                      <i
+                        class="pi pi-check-circle isch"
+                        style="font-size: 4rem"
+                      ></i>
+                      <h1 class="mainsize fw-medium mt-2">
+                        تم ارسال طلبك بنجاح
+                      </h1>
+                      <div class="btn-home d-flex gap-3 justify-content-center">
+                        <router-link to="/Destilrequest">
+                          <button
+                            style="background-color: #004889; color: #fff"
+                          >
+                            <i class="pi pi-arrow-circle-right"></i>متابعة طلبى
+                          </button>
+                        </router-link>
+                        <router-link to="/">
+                          <button>الرئيسية</button>
+                        </router-link>
+                      </div>
+                    </div>
+                  </Dialog>
                 </div>
               </div>
             </div>
-            <div
-              class="grop-radi d-flex justify-content-center gap-3 mb-2 flex-wrap"
-            >
-              <div class="addres d-flex flex-column">
-                <label for="">العنوان</label>
-                <input type="text" placeholder="الرجاء ادخال العنوان" />
-              </div>
-            </div>
-            <div
-              class="grop-radi d-flex justify-content-center gap-3 flex-wrap"
-            >
-              <div class="d-flex flex-column">
-                <label for="" class="me-2">ملاحظاتك</label>
-                <div class="card">
-                  <Editor v-model="value" editorStyle="height: 150px" />
-                </div>
-              </div>
-            </div>
-            <div
-              class="grop-radis d-flex justify-content-center gap-3 flex-wrap mt-3"
-            >
-              <div class="form-chemcsk d-flex gap-2">
-                <input
-                  class="form-check-input fw-medium"
-                  type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault3"
-                  checked
-                />
-                <label class="form-checsk-label" for="flexRadioDefault1">
-                  <i class="pi pi-paypal"></i>دفع الكترونى
-                </label>
-              </div>
-              <div class="form-chemck d-flex gap-2">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault1"
-                />
-                <label class="form-check-label" for="flexRadioDefault1">
-                  <i class="pi pi-car"></i> دفع بواسطة الشركه
-                </label>
-              </div>
-            </div>
-            .
-            <div
-              class="grop-radis d-flex justify-content-center gap-3 flex-wrap mt-3"
-            >
-              <div class="desc" style="width: 620px; height: auto">
-                <div class="destext border-bottom">
-                  <p class="fw-semibold p-1">ملخص الطلب:</p>
-                </div>
-                <div
-                  class="onetext text-black-50 mb-1 d-flex justify-content-between align-items-center flex-wrap"
-                >
-                  <p>قيمة الطلب</p>
-                  <p>60.00 رس</p>
-                </div>
-                <div
-                  class="onetext text-black-50 mb-1 d-flex justify-content-between align-items-center flex-wrap"
-                >
-                  <p>رسوم التوصيل</p>
-                  <p>10.00 رس</p>
-                </div>
-                <div
-                  class="onetext text-black-50 mb-1 d-flex justify-content-between align-items-center flex-wrap"
-                >
-                  <p>القيمة المضافة</p>
-                  <p>00.00 رس</p>
-                </div>
-                <div
-                  class="onetextw p-1 d-flex justify-content-between align-items-center flex-wrap"
-                >
-                  <p class="text-black-50">الاجمالى</p>
-                  <p>60.00 رس</p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="grop-radis d-flex justify-content-center gap-3 flex-wrap mt-3"
-            >
-              <div class="card flex justify-content-center">
-                <div class="btn-send">
-                  <button label="ارسال الطلب" @click="visible = true">
-                    ارسال الطلب
-                  </button>
-                </div>
-                <Dialog
-                  v-model:visible="visible"
-                  modal
-                  header=""
-                  :style="{ width: '30vw' }"
-                  :breakpoints="{ '1199px': '75vw', '575px': '90vw' }"
-                >
-                  <div class="m-0 text-center scss">
-                    <i class="pi pi-check-circle isch" style="font-size: 4rem"></i>
-                    <h1 class="mainsize  fw-medium mt-2">تم ارسال طلبك بنجاح</h1>
-                    <div class="btn-home  d-flex gap-3 justify-content-center">
-                      <router-link to="/Destilrequest">
-                      <button style="background-color:#004889; color:#fff;"><i class="pi pi-arrow-circle-right"></i>متابعة طلبى </button>
-                      </router-link>
-                      <router-link to="/">
-                      <button>الرئيسية</button>
-                      </router-link>
+            <div class="all-tap" v-if="activeTap === '2'">
+              <div
+                class="grop-forms d-flex justify-content-center flex-column flex-wrap"
+              >
+                <div class="d-flex justify-content-center mt-3">
+                  <div
+                    class="img-co d-flex justify-content-between align-items-center mb-3 flex-wrap"
+                  >
+                    <div class="one-company d-flex m-auto mb-2">
+                      <input type="radio" />
+                      <img :src="imga" alt="" class="img-fluid imgcc" />
+                      <div class="texs">
+                        <p class="fw-medium">شركة البيلى</p>
+                        <Rating v-model="value" />
+                      </div>
+                    </div>
+                    <div class="one-company d-flex m-auto mb-2">
+                      <input type="radio" />
+                      <img :src="imga" alt="" class="img-fluid imgcc" />
+                      <div class="texs">
+                        <p class="fw-medium">شركة البيلى</p>
+                        <Rating v-model="value" />
+                      </div>
+                    </div>
+                    <div class="one-company d-flex m-auto">
+                      <input type="radio" />
+                      <img :src="imga" alt="" class="img-fluid imgcc" />
+                      <div class="texs">
+                        <p class="fw-medium">شركة البيلى</p>
+                        <Rating v-model="value" />
+                      </div>
                     </div>
                   </div>
-                </Dialog>
-              </div>
-            </div>
-            </div>
-            <div class="all-tap" v-if="activeTap==='2'" >
- <div
-              class="grop-forms d-flex justify-content-center flex-column flex-wrap"
-            >
-            <div class=" d-flex justify-content-center mt-3">
-
-            <div class="img-co d-flex justify-content-between  align-items-center mb-3   flex-wrap  ">
-            <div class="one-company d-flex m-auto mb-2 ">
-              <input type="radio">
-              <img :src="imga" alt="" class=" img-fluid imgcc">
-              <div class="texs">
-              <p class=" fw-medium">شركة البيلى</p>
-          <Rating v-model="value" />
-              </div>
-              </div>
-            <div class="one-company d-flex m-auto mb-2 ">
-              <input type="radio">
-              <img :src="imga" alt="" class=" img-fluid imgcc">
-              <div class="texs">
-              <p class=" fw-medium">شركة البيلى</p>
-          <Rating v-model="value" />
-              </div>
-              </div>
-            <div class="one-company d-flex m-auto">
-              <input type="radio">
-              <img :src="imga" alt="" class=" img-fluid imgcc">
-              <div class="texs">
-              <p class=" fw-medium">شركة البيلى</p>
-          <Rating v-model="value" />
-              </div>
-              </div>
-           
-
-            </div>
-            </div>
-            </div>
-            <div
-              class="grop-forms d-flex justify-content-center flex-column flex-wrap"
-            >
-              <div class="d-flex justify-content-center gap-4 mt-4 flex-wrap">
-                <div class="one mb-3 d-flex flex-column">
-                  <label for="">اسم المستلم</label>
-                  <input type="text" placeholder="الرجاء ادخال اسم المستخدم" />
-                </div>
-                <div class="one mb-3 d-flex flex-column">
-                  <label for="">رقم الجوال</label>
-                  <input type="number" placeholder="الرجاء ادخال رقم الجوال" />
                 </div>
               </div>
-              <div class="d-flex justify-content-center gap-4 mt-1 flex-wrap">
-                <div class="one mb-3 d-flex flex-column">
-                  <label for="">المدينة</label>
-                  <input type="text" placeholder="الرجاء ادخال اسم المدينة" />
-                </div>
-                <div class="one mb-3 d-flex flex-column">
-                  <label for="">تاريج الاستلام</label>
-                  <input
-                    type="number"
-                    placeholder="الرجاء ادخال رقم الاستلام"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="grop-radi d-flex justify-content-center gap-3 mb-2 flex-wrap"
-            >
-              <div class="addres d-flex flex-column">
-                <label for="">العنوان</label>
-                <input type="text" placeholder="الرجاء ادخال العنوان" />
-              </div>
-            </div>
-            <div
-              class="grop-radi d-flex justify-content-center gap-3 flex-wrap"
-            >
-              <div class="d-flex flex-column">
-                <label for="" class="me-2">ملاحظاتك</label>
-                <div class="card">
-                  <Editor v-model="value" editorStyle="height: 150px" />
-                </div>
-              </div>
-            </div>
-            <div
-              class="grop-radis d-flex justify-content-center gap-3 flex-wrap mt-3"
-            >
-              <div class="form-chemcsk d-flex gap-2">
-                <input
-                  class="form-check-input fw-medium"
-                  type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault3"
-                  checked
-                />
-                <label class="form-checsk-label" for="flexRadioDefault1">
-                  <i class="pi pi-paypal"></i>دفع الكترونى
-                </label>
-              </div>
-              <div class="form-chemck d-flex gap-2">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault1"
-                />
-                <label class="form-check-label" for="flexRadioDefault1">
-                  <i class="pi pi-car"></i> دفع بواسطة الشركه
-                </label>
-              </div>
-            </div>
-            .
-            <div
-              class="grop-radis d-flex justify-content-center gap-3 flex-wrap mt-3"
-            >
-              <div class="desc" style="width: 620px; height: auto">
-                <div class="destext border-bottom">
-                  <p class="fw-semibold p-1">ملخص الطلب:</p>
-                </div>
-                <div
-                  class="onetext text-black-50 mb-1 d-flex justify-content-between align-items-center flex-wrap"
-                >
-                  <p>قيمة الطلب</p>
-                  <p>60.00 رس</p>
-                </div>
-                <div
-                  class="onetext text-black-50 mb-1 d-flex justify-content-between align-items-center flex-wrap"
-                >
-                  <p>رسوم التوصيل</p>
-                  <p>10.00 رس</p>
-                </div>
-                <div
-                  class="onetext text-black-50 mb-1 d-flex justify-content-between align-items-center flex-wrap"
-                >
-                  <p>القيمة المضافة</p>
-                  <p>00.00 رس</p>
-                </div>
-                <div
-                  class="onetextw p-1 d-flex justify-content-between align-items-center flex-wrap"
-                >
-                  <p class="text-black-50">الاجمالى</p>
-                  <p>60.00 رس</p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="grop-radis d-flex justify-content-center gap-3 flex-wrap mt-3"
-            >
-              <div class="card flex justify-content-center">
-                <div class="btn-send">
-                  <button label="ارسال الطلب" @click="visible = true">
-                    ارسال الطلب
-                  </button>
-                </div>
-                <Dialog
-                  v-model:visible="visible"
-                  modal
-                  header=""
-                  :style="{ width: '30vw' }"
-                  :breakpoints="{ '1199px': '75vw', '575px': '90vw' }"
-                >
-                  <div class="m-0 text-center scss">
-                    <i class="pi pi-check-circle isch" style="font-size: 4rem"></i>
-                    <h1 class="mainsize  fw-medium mt-2">تم ارسال طلبك بنجاح</h1>
-                    <div class="btn-home  d-flex gap-3 justify-content-center">
-                      <router-link to="/Destilrequest" >
-                      <button style="background-color:#004889; color:#fff;"><i class="pi pi-arrow-circle-right"></i>متابعة طلبى </button>
-                      </router-link>
-                      <router-link to="/">
-                      <button>الرئيسية</button>
-                      </router-link>
-                    </div>
+              <div
+                class="grop-forms d-flex justify-content-center flex-column flex-wrap"
+              >
+                <div class="d-flex justify-content-center gap-4 mt-4 flex-wrap">
+                  <div class="one mb-3 d-flex flex-column">
+                    <label for="">اسم المستلم</label>
+                    <input
+                      type="text"
+                      placeholder="الرجاء ادخال اسم المستخدم"
+                    />
                   </div>
-                </Dialog>
+                  <div class="one mb-3 d-flex flex-column">
+                    <label for="">رقم الجوال</label>
+                    <input
+                      type="number"
+                      placeholder="الرجاء ادخال رقم الجوال"
+                    />
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center gap-4 mt-1 flex-wrap">
+                  <div class="one mb-3 d-flex flex-column">
+                    <label for="">المدينة</label>
+                    <input type="text" placeholder="الرجاء ادخال اسم المدينة" />
+                  </div>
+                  <div class="one mb-3 d-flex flex-column">
+                    <label for="">تاريج الاستلام</label>
+                    <input
+                      type="number"
+                      placeholder="الرجاء ادخال رقم الاستلام"
+                    />
+                  </div>
+                </div>
               </div>
-            </div>
+              <div
+                class="grop-radi d-flex justify-content-center gap-3 mb-2 flex-wrap"
+              >
+                <div class="addres d-flex flex-column">
+                  <label for="">العنوان</label>
+                  <input type="text" placeholder="الرجاء ادخال العنوان" />
+                </div>
+              </div>
+              <div
+                class="grop-radi d-flex justify-content-center gap-3 flex-wrap"
+              >
+                <div class="d-flex flex-column">
+                  <label for="" class="me-2">ملاحظاتك</label>
+                  <div class="card">
+                    <Editor v-model="value" editorStyle="height: 150px" />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="grop-radis d-flex justify-content-center gap-3 flex-wrap mt-3"
+              >
+                <div class="form-chemcsk d-flex gap-2">
+                  <input
+                    class="form-check-input fw-medium"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault3"
+                    checked
+                  />
+                  <label class="form-checsk-label" for="flexRadioDefault1">
+                    <i class="pi pi-paypal"></i>دفع الكترونى
+                  </label>
+                </div>
+                <div class="form-chemck d-flex gap-2">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault1"
+                  />
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    <i class="pi pi-car"></i> دفع بواسطة الشركه
+                  </label>
+                </div>
+              </div>
+              .
+              <div
+                class="grop-radis d-flex justify-content-center gap-3 flex-wrap mt-3"
+              >
+                <div class="desc" style="width: 620px; height: auto">
+                  <div class="destext border-bottom">
+                    <p class="fw-semibold p-1">ملخص الطلب:</p>
+                  </div>
+                  <div
+                    class="onetext text-black-50 mb-1 d-flex justify-content-between align-items-center flex-wrap"
+                  >
+                    <p>قيمة الطلب</p>
+                    <p>60.00 رس</p>
+                  </div>
+                  <div
+                    class="onetext text-black-50 mb-1 d-flex justify-content-between align-items-center flex-wrap"
+                  >
+                    <p>رسوم التوصيل</p>
+                    <p>10.00 رس</p>
+                  </div>
+                  <div
+                    class="onetext text-black-50 mb-1 d-flex justify-content-between align-items-center flex-wrap"
+                  >
+                    <p>القيمة المضافة</p>
+                    <p>00.00 رس</p>
+                  </div>
+                  <div
+                    class="onetextw p-1 d-flex justify-content-between align-items-center flex-wrap"
+                  >
+                    <p class="text-black-50">الاجمالى</p>
+                    <p>60.00 رس</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="grop-radis d-flex justify-content-center gap-3 flex-wrap mt-3"
+              >
+                <div class="card flex justify-content-center">
+                  <div class="btn-send">
+                    <button label="ارسال الطلب" @click="visible = true">
+                      ارسال الطلب
+                    </button>
+                  </div>
+                  <Dialog
+                    v-model:visible="visible"
+                    modal
+                    header=""
+                    :style="{ width: '30vw' }"
+                    :breakpoints="{ '1199px': '75vw', '575px': '90vw' }"
+                  >
+                    <div class="m-0 text-center scss">
+                      <i
+                        class="pi pi-check-circle isch"
+                        style="font-size: 4rem"
+                      ></i>
+                      <h1 class="mainsize fw-medium mt-2">
+                        تم ارسال طلبك بنجاح
+                      </h1>
+                      <div class="btn-home d-flex gap-3 justify-content-center">
+                        <router-link to="/Destilrequest">
+                          <button
+                            style="background-color: #004889; color: #fff"
+                          >
+                            <i class="pi pi-arrow-circle-right"></i>متابعة طلبى
+                          </button>
+                        </router-link>
+                        <router-link to="/">
+                          <button>الرئيسية</button>
+                        </router-link>
+                      </div>
+                    </div>
+                  </Dialog>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -396,23 +432,23 @@ import Editor from "primevue/editor";
 import { ref } from "vue";
 import Dialog from "primevue/dialog";
 import img from "../assets/compay.png";
-import Rating from 'primevue/rating';
+import Rating from "primevue/rating";
 
 export default {
   name: "Cart",
   data() {
     return {
-      imga:img,
+      imga: img,
       pay: "شراء",
       show: false,
-      value:ref(""),
-              activeTap:"1",
+      value: ref(""),
+      activeTap: "1",
 
       visible: ref(false),
       value: ref("اكتب ملاحظات ان وجدت"),
     };
   },
-  components: { Editor, Dialog,Rating },
+  components: { Editor, Dialog, Rating },
   computed: {
     ...mapGetters(["cartItems"]),
   },
@@ -441,13 +477,13 @@ export default {
   height: 50px;
   margin-right: 10px;
 }
-input::placeholder{
+input::placeholder {
   font-size: 12px;
 }
-.scss .isch{
+.scss .isch {
   color: var(--main-color);
 }
-.scss h1{
+.scss h1 {
   font-size: 30px !important;
 }
 .cart-cart {
@@ -484,10 +520,10 @@ input::placeholder{
   font-weight: 700;
   transition: 0.3s;
 }
-.btn-home button:first-child{
+.btn-home button:first-child {
   background-color: var(--main-color);
   display: flex;
-  gap:10px;
+  gap: 10px;
   align-items: center;
   justify-content: center;
   color: #fff;
@@ -498,8 +534,8 @@ input::placeholder{
   font-size: 18px;
   width: 120px;
 }
-.btn-home button:last-child{
-   display: flex;
+.btn-home button:last-child {
+  display: flex;
   gap: 2px;
   align-items: center;
   justify-content: center;
@@ -567,5 +603,4 @@ input::placeholder{
   padding: 20px;
   border-radius: 8px;
 }
-
 </style>

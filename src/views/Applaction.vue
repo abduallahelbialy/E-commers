@@ -42,10 +42,10 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper/modules";
-import img from "../assets/andr.png";
-import img2 from "../assets/andrrte.png";
-import img3 from "../assets/andrs.png";
-import img4 from "../assets/andrtwo.png";
+import img from "../assets/WhatsApp Image 2024-06-12 at 11.18.29 PM.jpeg";
+import img2 from "../assets/WhatsApp Image 2024-06-12 at 11.18.29 PM (1).jpeg";
+import img3 from "../assets/WhatsApp Image 2024-06-12 at 11.18.29 PM (2).jpeg";
+import img4 from "../assets/WhatsApp Image 2024-06-12 at 11.18.30 PM.jpeg";
 import phone from "../assets/ooa.png"
 import phone2 from "../assets/oo .png"
 export default {
@@ -62,7 +62,7 @@ export default {
         { id: 4, swi: img4 },
       ],
       textapp: "صفحات التطبيق",
-      des: "يمتلك تطبيق جهز الكثير من المميزات وتقوم بعرض مميزات التطبيق",
+      des: "يمتلك تطبيق 'طلبك' الكثير من المميزات وتقوم بعرض مميزات التطبيق",
     };
   },
   components: {

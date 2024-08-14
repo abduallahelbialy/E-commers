@@ -102,7 +102,7 @@ export default {
       num:"201028924906+",
       contact:"تواصل معنا",
       home:"الرئيسية",
-      allL:"جميع الحقوق محفوظة لمؤسسة جهز @2024",
+      allL:"جميع الحقوق محفوظة لمؤسسة طلبك @2024",
             currentPath: window.location.pathname,
     };
   },

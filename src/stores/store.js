@@ -1,22 +1,27 @@
-import { createStore } from "vuex";
+// store.js
+import { defineStore } from "pinia";
 
-export default createStore({
-  state: {
-    cart: [],
-  },
-  mutations: {
-    ADD_TO_CART(state, product) {
-      state.cart.push(product);
-    },
-  },
+export const useUserStore = defineStore("user", {
+  state: () => ({
+    isLoggedIn: false,
+    username: "",
+    email: "",
+    password: "",
+  }),
   actions: {
-    addToCart({ commit }, product) {
-      commit("ADD_TO_CART", product);
+    login(username) {
+      this.isLoggedIn = true;
+      this.username = username;
     },
-  },
-  getters: {
-    cartItems(state) {
-      return state.cart;
+    logout() {
+      this.isLoggedIn = false;
+      this.username = "";
+    },
+    signup(userData) {
+      this.username = userData.username;
+      this.email = userData.email;
+      this.password = userData.password;
+      this.isLoggedIn = true;
     },
   },
 });

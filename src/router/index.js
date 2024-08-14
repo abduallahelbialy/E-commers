@@ -207,6 +207,7 @@ const router = createRouter({
       name: "ProductDetails",
       component: ProductDetails,
     },
+    
     // {
     //   path: '/about',
     //   name: 'about',

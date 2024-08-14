@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import img1 from "../assets/Screenshot 2024-05-10 174649.jpg";
+import img1 from "../assets/imgrquest.png";
 export default {
   name: "About",
   data() {

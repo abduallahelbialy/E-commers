@@ -3,8 +3,7 @@
     <div class="container mt-5">
       <div class="row">
         <div
-          class="d-flex justify-content-around gap-2 flex-wrap align-items-center"
-        >
+          class="d-flex justify-content-around gap-2 flex-wrap align-items-center" >
           <div class="one">
             <h1 class="text-center mb-3 active m-auto">{{ wel }}</h1>
             <form @submit.prevent="login">
@@ -90,6 +89,7 @@
 <script>
 import logo from "../assets/Screenshot 2024-05-10 174649.jpg";
 import foot from "../assets/mask.png";
+import { useUserStore } from '../stores/store';
 
 export default {
   data() {
@@ -147,6 +147,10 @@ export default {
       this.showPassword = !this.showPassword;
       this.eyeIcon = this.showPassword ? "pi pi-eye-slash" : "pi pi-eye";
     },
+  },
+   setup() {
+    const userStore = useUserStore();
+    return { userStore };
   },
 };
 </script>

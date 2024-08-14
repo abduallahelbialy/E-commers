@@ -102,6 +102,7 @@
 import logo from "../assets/Screenshot 2024-05-10 174649.jpg";
 import Sigtwo from "../views/Sigtwo.vue";
 import foot from "../assets/mask.png";
+import { useUserStore } from '../stores/store';
 
 export default {
   data() {
@@ -207,6 +208,10 @@ export default {
       this.showPassword = !this.showPassword;
       this.eyeIcon = this.showPassword ? "pi pi-eye-slash" : "pi pi-eye";
     },
+  },
+     setup() {
+    const userStore = useUserStore();
+    return { userStore };
   },
 };
 </script>

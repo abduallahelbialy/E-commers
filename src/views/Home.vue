@@ -56,7 +56,7 @@ export default {
   data() {
     return {
       now:"تسوق الان",
-      gahas:"جهز فى خدمتك دايما",
+      gahas:"طلبك فى خدمتك دايما",
       all:"جميع طلباتك تجدها هنا",
       modules: [Navigation,Autoplay],
        autoplay: {

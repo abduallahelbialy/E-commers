@@ -79,6 +79,9 @@
 import { ref } from "vue";
 import { mapActions, mapGetters } from 'vuex';
 import imgcard from "../assets/vojtech-bruzek-Yrxr3bsPdS0-unsplash.webp";
+import imgcard2 from "../assets/71B3JCgklQL._AC_UL480_FMwebp_QL65_.webp";
+import imgcard3 from "../assets/716mHLcER6L._AC_UL480_FMwebp_QL65_.webp";
+import imgcard4 from "../assets/51NdxsYwq-L._AC_UL480_FMwebp_QL65_.webp";
 import Rating from "primevue/rating";
 export default {
   name: "Now",
@@ -86,7 +89,7 @@ export default {
     return {
       more: "المزيد",
       pay: "جديدنا",
-      cards: [
+    cards: [
         {
           id: 1,
           img: imgcard,
@@ -96,40 +99,36 @@ export default {
           offer: "off 50%",
           det: "تفاصيل المنتج",
           value: ref("3"),
-
         },
         {
           id: 2,
-          img: imgcard,
-          title: "سرير تركى",
+          img: imgcard2,
+          title: "أباجورة مودرن أمازون",
           price: "8000ر.س",
           hotle: "فنادق",
           offer: "off 50%",
           det: "تفاصيل المنتج",
           value: ref("3"),
-
         },
         {
           id: 3,
-          img: imgcard,
-          title: "سرير تركى",
+          img: imgcard3,
+          title: " وحدة تلفزيون ترفيهية",
           price: "8000ر.س",
           hotle: "فنادق",
           offer: "off 50%",
           det: "تفاصيل المنتج",
           value: ref("3"),
-
         },
         {
           id: 4,
-          img: imgcard,
-          title: "سرير تركى",
+          img: imgcard4,
+          title: "ساعة سمارت",
           price: "8000ر.س",
           hotle: "فنادق",
           offer: "off 50%",
           det: "تفاصيل المنتج",
           value: ref("3"),
-
         },
       ],
       currentCardId: null,

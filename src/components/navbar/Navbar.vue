@@ -136,6 +136,7 @@
 import logo from "../../assets/logonav.webp";
 import ph from "../../assets/Untitled-1.jpg";
 import { mapGetters } from "vuex";
+import { useUserStore } from '../../stores/store';
 export default {
   name: "Navbar",
   computed: {
@@ -209,6 +210,10 @@ export default {
       this.username = JSON.parse(userData).username;
     }
   },
+     setup() {
+    const userStore = useUserStore();
+    return { userStore };
+  },
 };
 </script>
 
@@ -257,8 +262,8 @@ export default {
   background-color: #fff;
 }
 .logo {
-  width: 100px;
-  /* height: 100px; */
+  max-width: 90px;
+  max-height: 80px;
   object-fit: cover;
 }
 .logo img {
